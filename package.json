@@ -1,0 +1,19 @@
+{
+  "name": "cryptoapi",
+  "version": "1.0.0",
+  "description": "This is an API used to track price of all cryptocurrency available in the market. You can get the live value of different cryptocurrency and also news related to it . ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arghyadeep Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.14",
+    "npm": "^8.1.2"
+  }
+}

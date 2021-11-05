@@ -1,0 +1,3 @@
+--------CryptoCurrency API--------
+1. GET CURRENCY VALUE IN DOLLARS,RUPEES etc 
+2. GET MARKET CAPITAL VALUE 
