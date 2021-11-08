@@ -93,11 +93,11 @@ app.get('/top-gainers-losers/',(req,res)=>{
         const gainers_losers = $('.uikit-col-md-8.uikit-col-sm-16');
         var gainers = gainers_losers[0];
         var losers = gainers_losers[1];
-        
+        //console.log($(gainers).text(),$(losers).text());
         $(gainers).find('tr').each(function(i,elem){
             var rank = $(this).find('td:nth-child(1)').text();
-            var coin = $(this).find('td:nth-child(2)').find('.q7nmo0-0.bogImm').text();
-            var symbol = $(this).find('.q7nmo0-0.krbrab.coin-item-symbol').text();
+            var coin = $(this).find('td:nth-child(2)').find('p:nth-child(1)').text();
+            var symbol = $(this).find('td:nth-child(2)').find('p:nth-child(2)').text();
             var price = $(this).find('td:nth-child(3)').text();
             var change_24hr = $(this).find('td:nth-child(4)').text();
             var volume_24hr = $(this).find('td:nth-child(5)').text();
@@ -111,6 +111,7 @@ app.get('/top-gainers-losers/',(req,res)=>{
                 "Rise 24hr":change_24hr,
                 "Volume 24hr":volume_24hr
             };
+            console.log(all);
             if(coin!==""){
                 list.push(all);
             }
