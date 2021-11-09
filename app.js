@@ -119,8 +119,8 @@ app.get('/top-gainers-losers/',(req,res)=>{
 
         $(losers).find('tr').each(function(i,elem){
             var rank = $(this).find('td:nth-child(1)').text();
-            var coin = $(this).find('td:nth-child(2)').find('.q7nmo0-0.bogImm').text();
-            var symbol = $(this).find('.q7nmo0-0.krbrab.coin-item-symbol').text();
+            var coin = $(this).find('td:nth-child(2)').find('p:nth-child(1)').text();
+            var symbol = $(this).find('td:nth-child(2)').find('p:nth-child(2)').text();
             var price = $(this).find('td:nth-child(3)').text();
             var change_24hr = $(this).find('td:nth-child(4)').text();
             var volume_24hr = $(this).find('td:nth-child(5)').text();
