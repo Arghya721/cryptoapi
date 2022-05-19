@@ -77,7 +77,7 @@ async function top_names(list) {
         const html = res.data;
         const $ = cherrio.load(html);
         const list = [];
-        $('.chakra-text.css-1mrk1dy').each(function(i,elem){
+        $('.chakra-text.css-o2rp9n').each(function(i,elem){
             var coin = $(this).text();
             coin = coin.replace(" ","-");
             coin = coin.replace(".","-");
@@ -96,10 +96,11 @@ async function more_news() {
             const $ = cherrio.load(html);
             // console.log($('.typography__StyledTypography-owin6q-0').text());
             const list = [];
-            $('.article-cardstyles__AcTitle-q1x8lc-1.bwXBTf').each(function (i, elem) {
+            $('.article-cardstyles__AcTitle-q1x8lc-1.kaKDve').each(function (i, elem) {
                 var news_title = $(this).text();
                 //console.log(news_title);
-                var news_url = "https://www.coindesk.com".concat($(this).find('a').attr('href'));
+                var link = $(this).find('a.card-title').attr('href');
+                var news_url = "https://www.coindesk.com"+link;
                 list.push({
                     "Title": news_title,
                     "URL": news_url,
